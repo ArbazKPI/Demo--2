@@ -11,7 +11,7 @@ pipeline {
           
           echo "Setup"
             
-          sh "chmod -R a+rwx /var/lib/gems/3.0.0"
+          //chmod -R a+rwx /var/lib/gems/3.0.0
           // Install bundler in order to use fastlane
           sh "gem install bundler"
           // set the local path for bundles in vendor/bundle
