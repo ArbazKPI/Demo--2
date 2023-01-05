@@ -11,6 +11,8 @@ pipeline {
           
           echo "Setup"
             
+          sh "chmod +x gradlew"
+            
           //chmod -R a+rwx /var/lib/gems/3.0.0
           // Install bundler in order to use fastlane
           sh "gem install bundler"
