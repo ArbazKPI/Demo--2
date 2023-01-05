@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "941137516601",
+    "project_id": "fastlane-setup-e9892",
+    "storage_bucket": "fastlane-setup-e9892.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:941137516601:android:4ca208b28ff9c07cb155e8",
+        "android_client_info": {
+          "package_name": "com.raywenderlich.android.rwmagic8ball"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "941137516601-p9dh24b33vu18l5nkdop3ruuhho9s3n2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDv-7OsTxnNfI562ZORIWEF6m71eXtE_tw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "941137516601-p9dh24b33vu18l5nkdop3ruuhho9s3n2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

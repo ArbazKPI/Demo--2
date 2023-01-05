@@ -1,0 +1,24 @@
+default_platform :android
+
+
+
+  platform :android do
+     desc "Build"
+     lane :build do
+       gradle(task: "clean assembleRelease")
+     end
+
+     desc "Submit a new Beta Build to Firebase App Distribution"
+     lane :beta do
+       build
+
+       firebase_app_distribution(
+           app: "1:941137516601:android:4ca208b28ff9c07cb155e8",
+           groups: "Internal",
+           release_notes: "Increased Version code 5",
+           firebase_cli_token:"1//0giZdZ-eTrMKaCgYIARAAGBASNwF-L9Irj6McydPSehk7zXbC_SnrjPE6rhzAl-9t5NuptuWluj1VipSXVcVhD-Zn6-Ec79CCxhI",
+           debug:false
+       )
+     end
+
+ end

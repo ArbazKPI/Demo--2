@@ -1,0 +1,52 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'com.google.gms.google-services'
+
+android {
+  compileSdkVersion 31
+  defaultConfig {
+    applicationId "com.raywenderlich.android.rwmagic8ball"
+    minSdkVersion 19
+    targetSdkVersion 31
+    versionCode 7
+    versionName "1.0"
+  }
+  signingConfigs {
+    config {
+      keyAlias = 'upload'
+      keyPassword 'password'
+      storePassword 'password'
+      storeFile file('../upload-keystore.jks')
+    }
+  }
+
+  buildTypes {
+    release {
+      minifyEnabled false
+      proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+      signingConfig signingConfigs.config
+    }
+  }
+
+  buildFeatures {
+    viewBinding true
+  }
+}
+
+dependencies {
+  implementation fileTree(dir: 'libs', include: ['*.jar'])
+  implementation 'androidx.appcompat:appcompat:1.3.1'
+  implementation 'androidx.constraintlayout:constraintlayout:2.1.1'
+
+  implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+  // Import the Firebase BoM
+  implementation platform('com.google.firebase:firebase-bom:31.1.1')
+
+
+  // TODO: Add the dependencies for Firebase products you want to use
+  // When using the BoM, don't specify versions in Firebase dependencies
+  implementation 'com.google.firebase:firebase-analytics'
+
+
+  // Add the dependencies for any other desired Firebase products
+}
