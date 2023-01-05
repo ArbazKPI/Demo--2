@@ -10,6 +10,8 @@ pipeline {
           checkout scmGit(branches: [[name: '*/main']], extensions: [cloneOption(noTags: false, reference: '', shallow: false, timeout: 120)], userRemoteConfigs: [[url: 'https://github.com/ArbazKPI/Demo--2.git']])  
           
           echo "Setup"
+            
+          sh "chmod -R a+rwx /var/lib/gems/3.0.0"
           // Install bundler in order to use fastlane
           sudo -i sh "gem install bundler"
           // set the local path for bundles in vendor/bundle
