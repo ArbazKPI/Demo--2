@@ -6,6 +6,9 @@ pipeline {
     stages {
       stage('Setup') {
         steps {
+            
+          checkout scmGit(branches: [[name: '*/main']], extensions: [cloneOption(noTags: false, reference: '', shallow: false, timeout: 120)], userRemoteConfigs: [[url: 'https://github.com/ArbazKPI/Demo--2.git']])  
+          
           echo "Setup"
           // Install bundler in order to use fastlane
           bat "gem install bundler"
