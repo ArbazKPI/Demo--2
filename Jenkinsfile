@@ -22,14 +22,14 @@ pipeline {
       stage('Build') {
         steps {
           echo "Building"
-          bat "bundle exec fastlane build"
+          sh "bundle exec fastlane build"
         }
       }
 
       stage('Deploy') {
               steps {
                 echo "Deploying to Firebase"
-                bat "bundle exec fastlane beta"
+                sh "bundle exec fastlane beta"
               }
       }
     }
